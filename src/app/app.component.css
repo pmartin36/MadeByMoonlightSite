@@ -1,0 +1,28 @@
+app-nav {
+    position: fixed;
+    width: 50%;
+    top: 90vh;
+    left: 25%;
+    height: 5vh;
+}
+
+.page-section { 
+    height: 100vh;
+    width: 100%;
+}
+
+#home {
+    background-color: black;
+}
+
+#games {
+    background-color: #252525;
+}
+
+#about {
+    background-color: #444444;
+}
+
+#contact{
+    background-color: #888888;
+}

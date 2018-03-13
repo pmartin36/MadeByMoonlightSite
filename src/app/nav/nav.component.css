@@ -1,0 +1,28 @@
+#nav-link-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+span{
+    font-weight: bold;
+    flex: none;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.separator {
+    color: lightgray;
+    
+}
+
+.nav-link {
+    color: white;
+    
+}
