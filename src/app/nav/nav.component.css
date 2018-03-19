@@ -13,16 +13,18 @@ span{
 }
 
 a {
-    color: white;
+    color: gray;
     text-decoration: none;
+    user-select: none;
+}
+a:hover {
+    color: rgb(200, 200, 200);  
+}
+.focused{
+    color: white !important;
 }
 
 .separator {
     color: lightgray;
-    
-}
-
-.nav-link {
-    color: white;
-    
+    user-select: none;
 }

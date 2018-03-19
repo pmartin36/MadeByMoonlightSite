@@ -1,3 +1,42 @@
 <div class='section-container'>
-    contact-section works!
+    <div class='game-section'>
+        <div class='blowup-container'>
+            <div *ngIf="selectedGame" (click)="routeToSelectedGame()">
+                <div style="position:absolute"> 
+                    <svg height="75" width="300">
+                            <path d="M0,0 L300,0 L250,75 L0,75z" fill="black" />
+                    </svg>
+                </div>
+                <div class='title'>{{selectedGame.name}}</div>
+                <img class='blowup' [src]="selectedGame.blowupImageUrl || selectedGame.thumbnailImageUrl">
+            </div>
+            <div *ngIf="!selectedGame" class='no-game'>
+                No games for this platform...yet!
+            </div>
+        </div>
+
+        <div class='thumbnail-scroll'>
+            <img *ngFor='let game of filteredGames; let i = index' 
+                class='thumbnail'
+                (click)='thumbnailClicked(i)'
+                [class.thumbnail-selected]='selectedIndex === i'
+                [src]="game.thumbnailImageUrl">                    
+        </div>
+    
+        <div class='filter-container'>
+            <span class="nav-link nav-link-selected" (click)="setFilter('all')" [class.nav-link-selected]="filterType === 'all'">
+                All
+            </span>
+            <span class="separator"> | </span>
+        
+            <span class="nav-link" (click)="setFilter('mobile')" [class.nav-link-selected]="filterType === 'mobile'">
+                Mobile
+            </span>
+            <span class="separator"> | </span>
+        
+            <span class="nav-link" (click)="setFilter('pc')" [class.nav-link-selected]="filterType === 'pc'">
+                PC
+            </span>
+        </div>
+    </div>  
 </div>

@@ -1,3 +1,21 @@
 <div class='section-container'>
-  contact-section works!
+  <div class="contact-container">
+    <div class='contact-method'>   
+        <a href='https://twitter.com/MoonlightMade'>
+          <div class='icon' id='twitter-icon'></div>
+          <div class='contact'>@MoonlightMade</div>
+        </a>
+      </div>
+      <div class='contact-method'>
+          <div class='icon' id='email-icon'></div>
+          <div class='contact'>MadeByMoonlightGames@gmail.com</div>
+      </div>
+      <div class='contact-method'>
+          <div (click)="showMailingModal()" style="cursor: pointer">
+            <div class='icon' id='plus-icon'></div>
+            <div class='contact'>Sign up for the mailing list <i>(soon)</i></div>
+          </div>
+      </div>
+  </div> 
 </div>
+

@@ -11,5 +11,4 @@ export class HomeSectionComponent implements OnInit {
 
   ngOnInit() {
   }
-
 }
