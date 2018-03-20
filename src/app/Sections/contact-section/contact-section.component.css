@@ -6,6 +6,9 @@
     width: 100vw;
     z-index: 2;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .contact-method{
@@ -18,9 +21,7 @@
 
 .contact-container {
     position: relative;
-    left: 50%;
-    top: 45%;
-    transform: translate(-48%, -50%);
+    left: 2.5%;
 }
 
 #twitter-icon {

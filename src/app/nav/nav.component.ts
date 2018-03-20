@@ -1,4 +1,4 @@
-import { Component, OnInit, HostListener } from '@angular/core';
+import { Component, OnInit, HostListener, ViewChild, ElementRef, Renderer } from '@angular/core';
 import { Router } from '@angular/router';
 import { EasingLogic } from 'ng2-page-scroll';
 
@@ -9,18 +9,36 @@ import { EasingLogic } from 'ng2-page-scroll';
 })
 export class NavComponent implements OnInit {
 
+  top: string;
   sections: string[] = ['home', 'games', 'about', 'contact']
   focusedSection: string;
+
+  justScrolled: boolean;
+  timer: any;
+
+  @ViewChild('scroller')
+  scroller: ElementRef;
 
   @HostListener('window:scroll', ['$event'])
   scrollHandle(event) {
     this.determinePageLocation();
+
+    this.justScrolled = true;
+    clearTimeout(this.timer);
+    this.timer = setTimeout(() => {
+      this.justScrolled = false;
+    },250)
   }
 
   determinePageLocation(){
-    const scrollLocation = Math.round(window.scrollY / document.documentElement.clientHeight);
+    const body = document.body;
+    const html = document.documentElement;
+    const height = Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight );
+    this.top = 131 * window.scrollY / height  + '%';
+
+    const scrollLocation = Math.round(window.scrollY / html.clientHeight);
     const index = Math.min( scrollLocation, this.sections.length-1);
-    this.focusedSection = this.sections[index];
+    this.focusedSection = this.sections[index];  
   }
 
   myEasing: EasingLogic = {
@@ -33,7 +51,7 @@ export class NavComponent implements OnInit {
     }
   };
 
-  // constructor(private router: Router) { }
+  constructor(private renderer: Renderer) { }
 
   ngOnInit() {
     this.determinePageLocation();

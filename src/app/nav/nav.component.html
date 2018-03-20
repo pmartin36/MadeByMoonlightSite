@@ -38,3 +38,8 @@
     href="#contact">Contact</a>
   </span>
 </div>
+<div #scroller class='scroller' 
+  [style.top]="top"
+  [class.fadeIn]='justScrolled'
+  [class.fadeOut]='!justScrolled'>
+</div>
