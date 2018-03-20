@@ -48,9 +48,9 @@ http://www.Mkrtchyan.zz.mu
   background:transparent url(http://www.script-tutorials.com/demos/360/images/twinkling.png) repeat top center;
   z-index:1;
 
-  -moz-animation:move-twink-back 1000s linear infinite;
-  -ms-animation:move-twink-back 1000s linear infinite;
-  -o-animation:move-twink-back 1000s linear infinite;
-  -webkit-animation:move-twink-back 1000s linear infinite;
-  animation:move-twink-back 1000s linear infinite;
+  -moz-animation:move-twink-back 750s linear infinite;
+  -ms-animation:move-twink-back 750s linear infinite;
+  -o-animation:move-twink-back 750s linear infinite;
+  -webkit-animation:move-twink-back 750s linear infinite;
+  animation:move-twink-back 750s linear infinite;
 }
