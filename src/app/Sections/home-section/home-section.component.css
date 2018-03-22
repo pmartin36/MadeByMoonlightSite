@@ -26,3 +26,9 @@ img {
     margin-top: -2%;
     margin-left: 8%;
 }
+
+@media only screen and (max-width: 480px) {
+    .section-container {
+        height: 100vh;
+    }
+}
