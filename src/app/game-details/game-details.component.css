@@ -1,6 +1,6 @@
 .title {
     position: absolute;
-    top: 75px;
+    top: 10%;
     color: white;
     font-size: 50px;  
     font-style: bold;
@@ -8,7 +8,7 @@
 
 .youtube {
     position: absolute;
-    top: 200px;
+    top: 22%;
     background-color: black;
     width: 800px;
     height: 450px;
@@ -16,14 +16,14 @@
 
 .available {
     position: absolute;
-    top: 715px;
+    top: 75%;
     font-size: 20px;
     color: white;
 }
 
 .platforms {
     position: absolute;
-    top: 740px;
+    top: 80%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -47,31 +47,53 @@
     height: 100vh;
 }
 
-.back {
-    background-color: rgba(0,0,0,.5);
-    color: white;
+.header {
+    height: 5%;
+    width: 100%;
     position: absolute;
-    top: 20px;
-    left: -2px;
-    height: 50px;
-    width: 100px;
+    top: 0;
+    left: 0;
+    max-height: 50px;
+    background-color: black;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    justify-content: space-around;
+}
+
+.logo, .back-arrow {
     cursor: pointer;
-    border: 2px dashed white;
-    font-style: italic;
-    font-weight: bold;
+    background-repeat: no-repeat;
+    background-size: contain;   
+    background-color: transparent;
+    height: 100%;
+}
+
+.back-arrow {
+    position: relative;
+    height: 75%;
+    width: 50%;
+    max-width: 37px;
+    background-image: url('/assets/back-arrow.png'); 
+    background-position: center;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.spacer {
+    position: relative;
+    width: 33%
+}
+
+.logo {
+    width: 50%;
+    background-image: url('/assets/logo-oneline.png');
+    background-position: center;
+    margin: auto;
 }
 
 @media only screen and (max-width: 480px) {
     .title {
         top: 10%;
         font-size: 25px;
-    }
-
-    .back {
-        display: none;
     }
 
     .youtube {
