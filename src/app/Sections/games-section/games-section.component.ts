@@ -7,11 +7,12 @@ import { Router } from '@angular/router';
   templateUrl: './games-section.component.html',
   styleUrls: ['./games-section.component.css']
 })
-export class GamesSectionComponent {
+export class GamesSectionComponent implements OnInit{
 
   filterType: string = 'all';
   filteredGames: GameModel[];
   selectedIndex: number = 0;
+  mobile: boolean;
 
   get selectedGame(){
     return this.filteredGames[this.selectedIndex];
@@ -19,6 +20,12 @@ export class GamesSectionComponent {
 
   constructor(private gameService: GameService, private router: Router) { 
     this.filteredGames = gameService.games;
+  }
+
+  ngOnInit(){
+    if (window.screen.width <= 480) { // 768px portrait
+      this.mobile = true;
+    }
   }
 
   routeToSelectedGame(){

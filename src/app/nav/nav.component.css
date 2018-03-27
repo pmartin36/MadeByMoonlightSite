@@ -2,13 +2,12 @@
     position: fixed;
     width: 100%;
     top: 90vh;
-    left: 25%;
     height: 5vh;
     z-index: 3;
 }
 
 #nav-link-container {
-    width: 50%;
+    width: 100%;
     height: 100%;
     display: flex;
     flex-flow: row nowrap;
@@ -17,7 +16,15 @@
     border-radius: 15px;
     background:
         linear-gradient( rgba(0,0,0,.5), rgba(20,20,20, .8), rgba(0,0,0,.5));
-    padding: 0px 3% 0px 3%;
+    padding: 0px 5% 0px 5%;
+}
+
+.nav-link-center {
+    position: relative;
+    left: -2%;
+    width: 50%; 
+    height: 100%; 
+    margin: 0px auto;
 }
 
 span{
@@ -66,13 +73,8 @@ a:hover {
 
 
 @media only screen and (max-width: 480px) {
-    :host {
-        left: 2%;
-    }
-
-    #nav-link-container {
+    .nav-link-center {
         width: 85%;
-        padding: 0px 6% 0px 6%;
         height: 150%;
     }
 }

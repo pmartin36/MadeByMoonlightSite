@@ -21,9 +21,6 @@ export class GameDetailsComponent implements OnInit {
       private router: Router,
       private domSanitizer: DomSanitizer,
       private elementRef: ElementRef) {
-    this.location.onPopState(() => {
-      this.router.navigate([''], {fragment: '#games'});
-    })
   }
 
   ngOnInit() {

@@ -1,13 +1,4 @@
-<div class='backdrop' [style.background-image]="'url(' + game.backdropImageUrl + ')' || 'none'">
-  <div class='title' [ngStyle]="game.style">{{game.name}}</div>
-  <iframe class='youtube' [src]="getTrailerUrl()"></iframe>
-  <div class='available' [ngStyle]="game.style">{{game.availability}}</div>
-  <div class='platforms'>
-      <a *ngFor='let type of types' [href]='type.url'>
-          <img [src]='type.imageUrl' class='store-button'>
-      </a>
-  </div>
-</div>
+<div class='backdrop' [style.background-image]="'url(' + game.backdropImageUrl + ')' || 'none'"> </div>
 
 <div class='header'>
     <div class='spacer'>
@@ -18,3 +9,18 @@
     </div>   
     <div class='spacer'></div>
 </div>
+
+<div class='details-container'>
+  <div class='title' [ngStyle]="game.style">{{game.name}}</div>
+  <div class='youtube-container'>
+    <iframe class='youtube' [src]="getTrailerUrl()"></iframe>
+  </div>
+  <div class='available' [ngStyle]="game.style">{{game.availability}}</div>
+  <div class='platforms'>
+      <a *ngFor='let type of types' [href]='type.url'>
+          <img [src]='type.imageUrl' class='store-button'>
+      </a>
+  </div>
+</div>
+
+

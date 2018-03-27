@@ -1,42 +1,44 @@
-<div id="nav-link-container">
-  <span class="nav-link">
-    <a pageScroll 
-        [pageScrollDuration]="1000" 
-        [pageScrollEasing]="myEasing" 
-        [pageScrollAdjustHash]="false" 
-        [class.focused]="this.focusedSection === 'home'"
-        href="#home">Home</a>
-  </span>
-  <span class="separator"> | </span>
+<div class='nav-link-center'>
+  <div id="nav-link-container">
+    <span class="nav-link">
+      <a pageScroll 
+          [pageScrollDuration]="1000" 
+          [pageScrollEasing]="myEasing" 
+          [pageScrollAdjustHash]="false" 
+          [class.focused]="this.focusedSection === 'home'"
+          href="#home">Home</a>
+    </span>
+    <span class="separator"> | </span>
 
-  <span class="nav-link">
-    <a pageScroll 
-    [pageScrollDuration]="1000" 
-    [pageScrollEasing]="myEasing" 
-    [pageScrollAdjustHash]="false"
-    [class.focused]="this.focusedSection === 'games'"
-    href="#games">Games</a>
-  </span>
-  <span class="separator"> | </span>
+    <span class="nav-link">
+      <a pageScroll 
+      [pageScrollDuration]="1000" 
+      [pageScrollEasing]="myEasing" 
+      [pageScrollAdjustHash]="false"
+      [class.focused]="this.focusedSection === 'games'"
+      href="#games">Games</a>
+    </span>
+    <span class="separator"> | </span>
 
-  <span class="nav-link">
-    <a pageScroll 
-    [pageScrollDuration]="1000" 
-    [pageScrollEasing]="myEasing" 
-    [pageScrollAdjustHash]="false" 
-    [class.focused]="this.focusedSection === 'about'"
-    href="#about">About</a>
-  </span>
-  <span class="separator"> | </span>
+    <span class="nav-link">
+      <a pageScroll 
+      [pageScrollDuration]="1000" 
+      [pageScrollEasing]="myEasing" 
+      [pageScrollAdjustHash]="false" 
+      [class.focused]="this.focusedSection === 'about'"
+      href="#about">About</a>
+    </span>
+    <span class="separator"> | </span>
 
-  <span class="nav-link">
-    <a pageScroll 
-    [pageScrollDuration]="1000" 
-    [pageScrollEasing]="myEasing" 
-    [pageScrollAdjustHash]="false" 
-    [class.focused]="this.focusedSection === 'contact'"
-    href="#contact">Contact</a>
-  </span>
+    <span class="nav-link">
+      <a pageScroll 
+      [pageScrollDuration]="1000" 
+      [pageScrollEasing]="myEasing" 
+      [pageScrollAdjustHash]="false" 
+      [class.focused]="this.focusedSection === 'contact'"
+      href="#contact">Contact</a>
+    </span>
+  </div>
 </div>
 <div #scroller class='scroller' 
   [style.top]="top"
