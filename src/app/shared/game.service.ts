@@ -12,7 +12,7 @@ export class GameService {
                 name: 'Solar Express', 
                 urlname: 'solar-express',
                 types: new Map([
-                    ['android', {url: '', imageUrl: '/assets/google-play-badge.png'}]
+                    ['android', {url: 'https://play.google.com/store/apps/details?id=com.madebymoonlight.solarexpress', imageUrl: '/assets/google-play-badge.png'}]
                 ]), 
                 thumbnailImageUrl:'/assets/solar-express-icon.png',
                 backdropImageUrl: '/assets/solar-express-background.jpg',
