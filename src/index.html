@@ -9,5 +9,19 @@
 </head>
 <body>
   <app-root></app-root>
+  <script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script>
+  <script>
+    function showMailingPopUp() {
+      var popup = document.getElementById("PopupSignupForm_0");
+      if(popup){
+        popup.outerHTML = '';
+      }     
+      require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us12.list-manage.com","uuid":"73d95c4c17729f67f5b6a7cd2","lid":"eadf7ae01d"}) })
+      document.cookie = 'MCPopupClosed=;path=/;expires=Thu, 01 Jan 1970 00:00:00 UTC;';
+    };
+    document.addEventListener("DOMContentLoaded", function(event) {
+      document.getElementById("mailer-popup").onclick = function() {showMailingPopUp()};
+    });
+  </script>
 </body>
 </html>

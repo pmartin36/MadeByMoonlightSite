@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 
-declare var System: any;
 
 @Component({
   selector: 'app-contact-section',
@@ -10,9 +9,5 @@ declare var System: any;
 export class ContactSectionComponent {
 
   constructor() { }
-
-  showMailingModal () {
-    //System.import('./mojo.js').then(m => m.showModal());
-  }
 
 }

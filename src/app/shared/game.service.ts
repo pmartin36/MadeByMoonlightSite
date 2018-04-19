@@ -12,13 +12,14 @@ export class GameService {
                 name: 'Solar Express', 
                 urlname: 'solar-express',
                 types: new Map([
-                    ['android', {url: 'https://play.google.com/store/apps/details?id=com.madebymoonlight.solarexpress', imageUrl: '/assets/google-play-badge.png'}]
-                ]), 
+                    ['android', {url: 'https://play.google.com/store/apps/details?id=com.MadebyMoonlight.SolarExpress', imageUrl: '/assets/google-play-badge.png'}]
+                ]),
+                 
                 thumbnailImageUrl:'/assets/solar-express-icon.png',
                 backdropImageUrl: '/assets/solar-express-background.jpg',
                 blowupImageUrl: '/assets/solar-express-blowup.png',
                 trailerUrl: 'https://www.youtube.com/embed/ALHqt7_kMzs?autoplay=0',
-                availability: 'Coming out April 2018!',
+                availability: 'Available now!',
                 style: {
                     'color': 'white',
                     'font-family': 'solar-express',
