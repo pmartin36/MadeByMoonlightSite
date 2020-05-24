@@ -15,8 +15,8 @@ export class GameDetailsComponent implements OnInit {
   types: StoreLink[] = [];
 
   constructor(
-      private route: ActivatedRoute, 
-      private gameService: GameService, 
+      private route: ActivatedRoute,
+      private gameService: GameService,
       private location: PlatformLocation,
       private router: Router,
       private domSanitizer: DomSanitizer,
@@ -26,7 +26,7 @@ export class GameDetailsComponent implements OnInit {
   ngOnInit() {
     this.route.params.subscribe(params => {
       this.game = this.gameService.getGameFromUrlName(params['name']);
-      this.game.types.forEach((value,key) => {
+      this.game.types.forEach((value, key) => {
         this.types.push(value);
       });
     });
@@ -35,8 +35,8 @@ export class GameDetailsComponent implements OnInit {
     const html = document.documentElement;
     const width = Math.max( body.scrollWidth, body.offsetWidth, html.clientWidth, html.clientWidth, html.offsetWidth );
   }
-  
-  getTrailerUrl(){
+
+  getTrailerUrl() {
     return this.domSanitizer.bypassSecurityTrustResourceUrl(this.game.trailerUrl);
   }
 }

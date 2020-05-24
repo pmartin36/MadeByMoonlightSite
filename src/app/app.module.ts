@@ -29,8 +29,8 @@ import { HomeComponent } from './home/home.component';
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot([        
-      { path: '', component: HomeComponent, pathMatch: 'full' },  
+    RouterModule.forRoot([
+      { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: '404', component: NotFoundComponent },
       { path: ':name', component: GameDetailsComponent, canActivate: [CanActivateGameDetails] },
       { path: '**', component: NotFoundComponent },

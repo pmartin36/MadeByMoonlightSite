@@ -7,7 +7,7 @@ export interface GameModel {
     blowupImageUrl?: string;
     trailerUrl?: string;
     availability?: string;
-    style?: {[prop: string] : string};
+    style?: {[prop: string]: string};
 }
 
 export interface StoreLink {

@@ -1,5 +1,5 @@
-import { Injectable } from "@angular/core";
-import { GameModel } from ".";
+import { Injectable } from '@angular/core';
+import { GameModel } from '.';
 
 @Injectable()
 export class GameService {
@@ -9,13 +9,17 @@ export class GameService {
     constructor() {
         this.games = [
             {
-                name: 'Solar Express', 
+                name: 'Solar Express',
                 urlname: 'solar-express',
                 types: new Map([
-                    ['android', {url: 'https://play.google.com/store/apps/details?id=com.MadebyMoonlight.SolarExpress', imageUrl: '/assets/google-play-badge.png'}]
+                    ['android',
+                    {
+                        url: 'https://play.google.com/store/apps/details?id=com.MadebyMoonlight.SolarExpress',
+                        imageUrl: '/assets/google-play-badge.png'
+                    }]
                 ]),
-                 
-                thumbnailImageUrl:'/assets/solar-express-icon.png',
+
+                thumbnailImageUrl: '/assets/solar-express-icon.png',
                 backdropImageUrl: '/assets/solar-express-background.jpg',
                 blowupImageUrl: '/assets/solar-express-blowup.png',
                 trailerUrl: 'https://www.youtube.com/embed/ALHqt7_kMzs?autoplay=0',
@@ -38,25 +42,22 @@ export class GameService {
     }
 
     applyFilter(type: string): GameModel[] {
-        if(type === 'all'){
+        if (type === 'all') {
             return this.games;
-        }
-        else if(type === 'mobile'){
+        } else if (type === 'mobile') {
             return this.games.filter( g => this.gameisMobile(g) );
-        }
-        else if(type === 'pc'){
+        } else if (type === 'pc') {
             return this.games.filter( g => this.gameIsPC(g) );
-        }
-        else{
+        } else {
             return this.games.filter( g => g.types.has(type) );
         }
     }
 
-    getGameFromName(name: string){
+    getGameFromName(name: string) {
         return this.games.find(g => g.name === name);
     }
 
-    getGameFromUrlName(urlname: string){
+    getGameFromUrlName(urlname: string) {
         return this.games.find(g => (g.urlname || g.name) === urlname);
     }
 }

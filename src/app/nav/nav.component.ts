@@ -10,7 +10,7 @@ import { EasingLogic } from 'ng2-page-scroll';
 export class NavComponent implements OnInit {
 
   top: string;
-  sections: string[] = ['home', 'games', 'about', 'contact']
+  sections: string[] = ['home', 'games', 'about', 'contact'];
   focusedSection: string;
 
   justScrolled: boolean;
@@ -37,7 +37,7 @@ export class NavComponent implements OnInit {
     clearTimeout(this.timer);
     this.timer = setTimeout(() => {
       this.justScrolled = false;
-    },250)
+    }, 250);
   }
 
   determinePageLocation() {
