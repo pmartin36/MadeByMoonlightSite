@@ -1,0 +1,8 @@
+<div *ngIf="!!imageUrl; else starry">
+    <div class='backdrop' [style.background-image]="'url(' + imageUrl + ')' || 'none'"></div>
+</div>
+
+<ng-template #starry>
+    <div class="stars"></div>
+    <div class="twinkling"></div>
+</ng-template>

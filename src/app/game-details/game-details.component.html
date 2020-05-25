@@ -1,5 +1,4 @@
-<div class='backdrop' [style.background-image]="'url(' + game.backdropImageUrl + ')' || 'none'"> </div>
-
+<background [imageUrl]="game.backdropImageUrl"></background>
 <div class='header'>
     <div class='spacer'>
         <div class='back-arrow' [routerLink]="['']"></div>
@@ -11,16 +10,20 @@
 </div>
 
 <div class='details-container'>
-  <div class='title' [ngStyle]="game.style">{{game.name}}</div>
-  <div class='youtube-container'>
-    <iframe class='youtube' [src]="getTrailerUrl()"></iframe>
-  </div>
-  <div class='available' [ngStyle]="game.style">{{game.availability}}</div>
-  <div class='platforms'>
-      <a *ngFor='let type of types' [href]='type.url'>
-          <img [src]='type.imageUrl' class='store-button'>
-      </a>
-  </div>
+    <div class="title-container">
+        <div class='title' [ngStyle]="game.style" [attr.data-text]="game.name" [class.shadowed]="hasTextShadow">{{game.name}}</div>
+    </div>
+    <div class='youtube-container'>
+        <iframe class='youtube' [src]="getTrailerUrl()"></iframe>
+    </div>
+    <div class="available-container">
+        <div class='available' [ngStyle]="game.style" [attr.data-text]="game.availability" [class.shadowed]="hasTextShadow">{{game.availability}}</div>
+    </div>
+    <div class='platforms'>
+        <a *ngFor='let type of types' [href]='type.url'>
+            <img [src]='type.imageUrl' class='store-button'>
+        </a>
+    </div>
 </div>
 
 

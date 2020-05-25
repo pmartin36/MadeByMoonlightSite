@@ -17,3 +17,8 @@ body {
     font-family: solar-express;
     src: url('/assets/goodtimesrg.ttf')
 }
+
+@font-face{
+    font-family: the-16-spaces;
+    src: url('/assets/Aladin.ttf')
+}

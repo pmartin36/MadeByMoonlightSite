@@ -13,6 +13,7 @@ import { GameService, CanActivateGameDetails } from './shared/index';
 import { GameDetailsComponent } from './game-details/game-details.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { HomeComponent } from './home/home.component';
+import { BackgroundComponent } from './background/background.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { HomeComponent } from './home/home.component';
     HomeSectionComponent,
     GameDetailsComponent,
     NotFoundComponent,
-    HomeComponent
+    HomeComponent,
+    BackgroundComponent
   ],
   imports: [
     BrowserModule,

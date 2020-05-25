@@ -14,8 +14,7 @@
     justify-content: space-around;
     align-items: center;
     border-radius: 15px;
-    background:
-        linear-gradient( rgba(0,0,0,.5), rgba(20,20,20, .8), rgba(0,0,0,.5));
+    /* background: linear-gradient( rgba(0,0,0,.5), rgba(20,20,20, .8), rgba(0,0,0,.5)); */
     padding: 0px 5% 0px 5%;
 }
 
@@ -69,6 +68,15 @@ a:hover {
 
 .fadeOut{
     opacity: 0;
+}
+
+.outline-text {
+    text-shadow:
+    -1px -1px 0 #000,  
+     1px -1px 0 #000,
+    -1px  1px 0 #000,
+     1px  1px 0 #000;
+    letter-spacing: 0.5px;
 }
 
 

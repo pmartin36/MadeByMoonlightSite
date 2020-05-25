@@ -1,16 +1,50 @@
 .title {
-    position: relative;
-    margin-top: 3%;
-    color: white;
-    font-size: 50px;  
-    font-style: bold;
+    text-align: center;
+}
+
+.shadowed::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
     width: 100%;
+    text-shadow:    
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px  1px 0 #000,
+        1px  1px 0 #000;
+}
+
+.shadowed {
+}
+
+.title-container {
+    position: relative;
+    margin: 2% auto 0px auto;
+    color: white;
+    font-size: 6rem;  
+    font-style: bold;
+    width: 50%;
+    text-align: center;
+}
+
+.available {
+    text-align: center;
+}
+
+.available-container {
+    position: relative;
+    margin: 3% auto 0px auto;
+    font-size: 3rem;
+    color: white;
+    width: 50%;
     text-align: center;
 }
 
 .youtube-container {
     position: relative;
-    margin: 3% auto 0px auto;
+    margin: 2% auto 0px auto;
     width: 800px;
     height: 0;
     padding-bottom: 450px;
@@ -23,18 +57,10 @@
 	top: 0; bottom: 0; left: 0; right: 0;
 }
 
-.available {
-    position: relative;
-    margin-top: 3%;
-    font-size: 20px;
-    color: white;
-    width: 100%;
-    text-align: center;
-}
 
 .platforms {
     position: relative;
-    margin: 2% auto 0px auto;
+    margin: 1% auto 0px auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -45,25 +71,12 @@
     object-fit: contain;
 }
 
-.backdrop {
-    background-color: black;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-
-    position: fixed;
-    top: 0;
-
-    width: 100vw;
-    height: 100vh;
-}
-
 .header {
     height: 5%;
     width: 100%;
     position: relative;
     height: 50px;
-    background-color: black;
+    background-color: #111111;
     display: flex;
     justify-content: space-around;
 }

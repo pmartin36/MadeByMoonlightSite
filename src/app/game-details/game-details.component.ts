@@ -10,9 +10,9 @@ import { DomSanitizer } from '@angular/platform-browser';
   styleUrls: ['./game-details.component.css']
 })
 export class GameDetailsComponent implements OnInit {
-
   game: GameModel;
   types: StoreLink[] = [];
+  hasTextShadow = false;
 
   constructor(
       private route: ActivatedRoute,
@@ -29,6 +29,11 @@ export class GameDetailsComponent implements OnInit {
       this.game.types.forEach((value, key) => {
         this.types.push(value);
       });
+
+      if (this.game.style && this.game.style['text-shadow']) {
+        this.hasTextShadow = true;
+        this.game.style['text-shadow'] = null;
+      }
     });
 
     const body = document.body;
