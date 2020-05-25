@@ -1,0 +1,8 @@
+1) if not installed, npm install -g firebase-tools
+2) npm run build
+3) firebase login
+4) if somehow not initialized, firebase init
+5) npm deploy
+
+see video for further details:
+https://www.youtube.com/watch?v=aICeVhu2mAE
