@@ -30,7 +30,7 @@ export class GameService {
                 thumbnailImageUrl: '/assets/the-16-spaces-icon.png',
                 backdropImageUrl: '/assets/the-16-spaces-background.png',
                 blowupImageUrl: '/assets/the-16-spaces-blowup.png',
-                trailerUrl: 'https://www.youtube.com/embed/ALHqt7_kMzs?autoplay=0',
+                trailerUrl: 'https://www.youtube.com/embed/Y0UHuiSrvBo?autoplay=0',
                 availability: 'Coming September 2020!',
                 style: {
                     'background-image' : 'linear-gradient(15deg, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C)',

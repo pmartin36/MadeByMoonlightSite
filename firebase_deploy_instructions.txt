@@ -2,7 +2,7 @@
 2) npm run build
 3) firebase login
 4) if somehow not initialized, firebase init
-5) npm deploy
+5) firebase deploy
 
 see video for further details:
 https://www.youtube.com/watch?v=aICeVhu2mAE
