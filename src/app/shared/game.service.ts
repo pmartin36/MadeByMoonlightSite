@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { GameModel } from '.';
+import { PricingModel } from './model';
 
 @Injectable()
 export class GameService {
@@ -11,6 +12,7 @@ export class GameService {
             {
                 name: 'The 16 Spaces',
                 urlname: 'the-16-spaces',
+                pricingModel: PricingModel.Freemium,
                 types: new Map([
                     [
                         'android',
@@ -46,6 +48,7 @@ export class GameService {
             {
                 name: 'Solar Express',
                 urlname: 'solar-express',
+                pricingModel: PricingModel.Free,
                 types: new Map([
                     ['android',
                     {

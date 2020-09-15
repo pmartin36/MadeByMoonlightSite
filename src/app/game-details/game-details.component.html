@@ -1,14 +1,5 @@
 <background [imageUrl]="game.backdropImageUrl"></background>
-<div class='header'>
-    <div class='spacer'>
-        <div class='back-arrow' [routerLink]="['']"></div>
-    </div>
-    <div class='spacer'>
-        <div class='logo' [routerLink]="['']"></div>
-    </div>   
-    <div class='spacer'></div>
-</div>
-
+<app-header></app-header>
 <div class='details-container'>
     <div class="title-container">
         <div class='title' [ngStyle]="game.style" [attr.data-text]="game.name" [class.shadowed]="hasTextShadow">{{game.name}}</div>

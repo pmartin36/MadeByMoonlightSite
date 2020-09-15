@@ -14,6 +14,8 @@ import { GameDetailsComponent } from './game-details/game-details.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { HomeComponent } from './home/home.component';
 import { BackgroundComponent } from './background/background.component';
+import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
+import { HeaderComponent } from './header/header.component';
 
 
 @NgModule({
@@ -27,13 +29,16 @@ import { BackgroundComponent } from './background/background.component';
     GameDetailsComponent,
     NotFoundComponent,
     HomeComponent,
-    BackgroundComponent
+    BackgroundComponent,
+    PrivacyPolicyComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: '404', component: NotFoundComponent },
+      { path: 'privacy/:name', component: PrivacyPolicyComponent },
       { path: ':name', component: GameDetailsComponent, canActivate: [CanActivateGameDetails] },
       { path: '**', component: NotFoundComponent },
     ]),

@@ -1,0 +1,40 @@
+.header {
+    width: 100%;
+    height: 50px;
+    top: 0;
+    background-color: #111111;
+    display: flex;
+    justify-content: space-around;
+    position: static;
+}
+
+.logo, .back-arrow {
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-size: contain;   
+    background-color: transparent;
+    height: 100%;
+}
+
+.back-arrow {
+    position: relative;
+    height: 75%;
+    width: 50%;
+    max-width: 37px;
+    background-image: url('/assets/back-arrow.png'); 
+    background-position: center;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.spacer {
+    position: relative;
+    width: 33%
+}
+
+.logo {
+    width: auto;
+    background-image: url('/assets/logo-oneline.png');
+    background-position: center;
+    margin: auto;
+}

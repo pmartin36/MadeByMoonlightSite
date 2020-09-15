@@ -1,6 +1,7 @@
 export interface GameModel {
     name: string;
     urlname?: string;
+    pricingModel: PricingModel;
     types: Map<string, StoreLink>;
     thumbnailImageUrl: string;
     backdropImageUrl?: string;
@@ -13,4 +14,10 @@ export interface GameModel {
 export interface StoreLink {
     url: string;
     imageUrl: string;
+}
+
+export enum PricingModel {
+    'Free' = 'Free',
+    'Freemium' = 'Freemium',
+    'Paid' = 'Paid'
 }
