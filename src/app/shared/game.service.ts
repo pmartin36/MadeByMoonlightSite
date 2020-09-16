@@ -17,7 +17,7 @@ export class GameService {
                     [
                         'android',
                         {
-                            url: 'https://play.google.com/store/apps/details?id=com.MadebyMoonlight.The16Spaces',
+                            url: 'https://play.google.com/store/apps/details?id=com.MadeByMoonlight.The16Spaces',
                             imageUrl: '/assets/google-play-badge.png'
                         }
                     ],
@@ -33,16 +33,16 @@ export class GameService {
                 backdropImageUrl: '/assets/the-16-spaces-background.png',
                 blowupImageUrl: '/assets/the-16-spaces-blowup.png',
                 trailerUrl: 'https://www.youtube.com/embed/Y0UHuiSrvBo?autoplay=0',
-                availability: 'Coming September 2020!',
+                availability: 'Available now on Android!',
                 style: {
                     'background-image' : 'linear-gradient(15deg, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C)',
+                    'background-clip': 'text',
                     '-webkit-background-clip': 'text',
                     '-webkit-text-fill-color': 'transparent',
-                    'font-family': 'the-16-spaces',
-                    'font-variant': 'small-caps',
+                    'font-family': 'didact gothic',
                     'font-style': 'default',
                     'text-shadow': 'true',
-                    'letter-spacing': '1px',
+                    'color': 'transparent'
                 }
             },
             {
