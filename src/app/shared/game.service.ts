@@ -24,7 +24,7 @@ export class GameService {
                     [
                         'ios',
                         {
-                            url: 'https://play.google.com/store/apps/details?id=com.MadebyMoonlight.The16Spaces',
+                            url: 'https://apps.apple.com/app/id1531790358',
                             imageUrl: '/assets/app-store-badge.png'
                         }
                     ],
